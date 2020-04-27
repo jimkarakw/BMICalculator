@@ -26,6 +26,8 @@ formFields.buttonResult.addEventListener("click", (event) => {
   formFields.divResult.value = bmiResult * 10000;
 });
 formFields.resetButton.addEventListener("click", (event) => {
+  // Prevent Form from Submitting
+  event.preventDefault();
   location.reload();
 });
 
