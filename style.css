@@ -85,12 +85,16 @@ li {
   transition: all 1s ease;
 }
 .fade-in {
-  -webkit-animation: fadeInResultDiv 1s ease;
-  animation: fadeInResultDiv 1s ease;
+  -webkit-animation: fadeInResultDiv 2s ease;
+  animation: fadeInResultDiv 2s ease;
 }
 .add-height {
-  -webkit-animation: addHeight 1s ease;
-  animation: addHeight 1s ease;
+  -webkit-animation: addHeight 0.7s ease;
+  animation: addHeight 0.7s ease;
+}
+.remove-height {
+  -webkit-animation: removeHeight 0.7s ease;
+  animation: removeHeight 0.7s ease;
 }
 .form-title {
   padding: 1rem;
@@ -272,6 +276,22 @@ input[type="number"] {
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes removeHeight {
+  from {
+    height: 618px;
+  }
+  to {
+    height: 529px;
+  }
+}
+@keyframes removeHeight {
+  from {
+    height: 618px;
+  }
+  to {
+    height: 529px;
   }
 }
 @-webkit-keyframes addHeight {
