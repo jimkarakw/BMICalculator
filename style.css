@@ -442,6 +442,15 @@ input[type="number"] {
     flex-direction: column;
     margin-top: 5rem;
   }
+  .reset-btn{
+    position: relative;
+    top: -15%;
+    width: 100%;
+    max-width: 225px;
+  }
+  .result-btn{
+    width: 100%;
+    max-width: 225px;}
 }
 @media (max-width: 450px) {
   h1 {
