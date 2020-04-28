@@ -22,15 +22,16 @@ formFields.buttonResult.addEventListener("click", (event) => {
     formFields.divResult.classList.remove("hide");
     formFields.divResult.classList.add("fade-in");
     formFields.theForm.classList.add("add-height");
+    formFields.divResult.value = bmiResult * 10000;
   }
-  formFields.divResult.value = bmiResult * 10000;
 });
 formFields.resetButton.addEventListener("click", (event) => {
   // Prevent Form from Submitting
   event.preventDefault();
-  location.reload();
+  //CLEAR INPUT VALUES
+  formFields.massField.value = "";
+  formFields.heightField.value = "";
+  formFields.divResult.value = "";
+  formFields.theForm.classList.add("remove-height");
+  formFields.divResult.classList.add("hide");
 });
-
-//CLEAR INPUT VALUES
-formFields.massField.value = "";
-formFields.heightField.value = "";
