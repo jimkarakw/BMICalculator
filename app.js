@@ -7,8 +7,10 @@ const formFields = {
   divResult: document.querySelector(".result-field"),
   theForm: document.querySelector("#bmi-form"),
 };
+
 //Block Result Field
 formFields.divResult.classList.add("hide");
+
 //EVENT LISTENERS
 formFields.buttonResult.addEventListener("click", (event) => {
   // Prevent Form from Submitting
@@ -19,14 +21,14 @@ formFields.buttonResult.addEventListener("click", (event) => {
   if (bmiResult > 0) {
     formFields.divResult.classList.remove("hide");
     formFields.divResult.classList.add("fade-in");
-    formFields.theForm.classList.add("add-height");
+    formFields.theForm.classList.add("form-height");
     formFields.divResult.value = bmiResult * 10000;
   }
 });
 formFields.resetButton.addEventListener("click", (event) => {
   // Prevent Form from Submitting
   event.preventDefault();
-  formFields.theForm.classList.add("remove-height");
+  formFields.theForm.classList.remove("form-height");
   formFields.divResult.classList.add("hide");
   //CLEAR INPUT VALUES
   formFields.massField.value = "";
