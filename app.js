@@ -7,10 +7,8 @@ const formFields = {
   divResult: document.querySelector(".result-field"),
   theForm: document.querySelector("#bmi-form"),
 };
-
 //Block Result Field
 formFields.divResult.classList.add("hide");
-
 //EVENT LISTENERS
 formFields.buttonResult.addEventListener("click", (event) => {
   // Prevent Form from Submitting
@@ -28,10 +26,10 @@ formFields.buttonResult.addEventListener("click", (event) => {
 formFields.resetButton.addEventListener("click", (event) => {
   // Prevent Form from Submitting
   event.preventDefault();
+  formFields.theForm.classList.add("remove-height");
+  formFields.divResult.classList.add("hide");
   //CLEAR INPUT VALUES
   formFields.massField.value = "";
   formFields.heightField.value = "";
   formFields.divResult.value = "";
-  formFields.theForm.classList.add("remove-height");
-  formFields.divResult.classList.add("hide");
 });
