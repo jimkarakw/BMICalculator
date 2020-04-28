@@ -7,10 +7,8 @@ const formFields = {
   divResult: document.querySelector(".result-field"),
   theForm: document.querySelector("#bmi-form"),
 };
-
 //Block Result Field
 formFields.divResult.classList.add("hide");
-
 //EVENT LISTENERS
 formFields.buttonResult.addEventListener("click", (event) => {
   // Prevent Form from Submitting
