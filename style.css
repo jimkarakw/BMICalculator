@@ -20,6 +20,11 @@ body {
       rgb(97, 89, 229),
       rgb(228, 235, 255)
     ) repeat scroll 0% 0%;
+  background: rgba(0, 0, 0, 0) -o-linear-gradient(
+      left,
+      rgb(97, 89, 229),
+      rgb(228, 235, 255)
+    ) repeat scroll 0% 0%;
   background: rgba(0, 0, 0, 0) -webkit-gradient(
       linear,
       left top,
@@ -69,11 +74,11 @@ li {
   align-items: center;
 }
 .runner-imgdiv svg {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  width: 40rem;
+  max-width: 40rem;
   padding: 5rem;
 }
 #bmi-form {
@@ -83,18 +88,26 @@ li {
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+  height: 545px;
+}
+.form-height {
+  -webkit-transition: all 1s ease !important;
+  -o-transition: all 1s ease !important;
+  transition: all 1s ease !important;
+  height: 620px !important;
+}
+.left-part {
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .fade-in {
   -webkit-animation: fadeInResultDiv 2s ease;
   animation: fadeInResultDiv 2s ease;
 }
 .add-height {
-  -webkit-animation: addHeight 0.7s ease;
-  animation: addHeight 0.7s ease;
-}
-.remove-height {
-  -webkit-animation: removeHeight 0.7s ease;
-  animation: removeHeight 0.7s ease;
+  -webkit-animation: addHeight 0.7s ease alternate;
+  animation: addHeight 0.7s ease alternate;
 }
 .form-title {
   padding: 1rem;
@@ -163,8 +176,6 @@ input[type="number"] {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  width: 100%;
-  max-width: 225px;
 }
 .reset-btn {
   border: none;
@@ -180,8 +191,6 @@ input[type="number"] {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  width: 100%;
-  max-width: 225px;
 }
 .reset-btn:hover {
   background: rgb(0, 0, 0);
@@ -202,6 +211,8 @@ input[type="number"] {
 .result-field {
   font-weight: 700;
   color: rgb(45, 156, 123);
+  -webkit-animation: fadeIn 1s ease-in;
+  animation: fadeIn 1s ease-in;
 }
 .bmi-categories {
   display: -webkit-box;
@@ -266,54 +277,6 @@ input[type="number"] {
   display: none;
 }
 /*keyframes*/
-@-webkit-keyframes fadeInResultDiv {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeInResultDiv {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes removeHeight {
-  from {
-    height: 618px;
-  }
-  to {
-    height: 529px;
-  }
-}
-@keyframes removeHeight {
-  from {
-    height: 618px;
-  }
-  to {
-    height: 529px;
-  }
-}
-@-webkit-keyframes addHeight {
-  from {
-    height: 529px;
-  }
-  to {
-    height: 618px;
-  }
-}
-@keyframes addHeight {
-  from {
-    height: 529px;
-  }
-  to {
-    height: 618px;
-  }
-}
 @-webkit-keyframes fromRight {
   from {
     opacity: 0;
@@ -447,7 +410,7 @@ input[type="number"] {
     margin-top: 5rem;
   }
 }
-@media (max-width: 474px) {
+@media (max-width: 450px) {
   h1 {
     font-size: 1.5rem;
   }
@@ -456,12 +419,9 @@ input[type="number"] {
   }
   #bmi-form {
     padding: 0.5rem;
+    height: auto !important;
   }
   input {
     font-size: 0.8rem;
-  }
-  .reset-btn{
-    position: relative;
-    top: -15%;
   }
 }
