@@ -69,11 +69,11 @@ li {
   align-items: center;
 }
 .runner-imgdiv svg {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  max-width: 40rem;
+  width: 40rem;
   padding: 5rem;
 }
 #bmi-form {
